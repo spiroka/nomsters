@@ -8,6 +8,8 @@ import path from 'node:path';
 dotenv.config();
 
 const fastify = Fastify({ logger: true });
+const port = process.env.PORT || 3000;
+const host = ("RENDER" in process.env) ? `0.0.0.0` : `localhost`;
 
 async function init() {
   const { clerkPlugin, getAuth } = await import('@clerk/fastify');
@@ -111,7 +113,7 @@ async function init() {
 const start = async () => {
   try {
     await init();
-    await fastify.listen({ port: 3000 });
+    fastify.listen({ port, host });
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
