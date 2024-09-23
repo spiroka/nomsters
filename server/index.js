@@ -31,7 +31,7 @@ async function init() {
     origin(origin, cb) {
       const host = origin ? new URL(origin).hostname : '';
 
-      if (host === 'localhost' || !host) {
+      if (host === 'localhost' || host === 'nomsters.onrender.com' || !host) {
         cb(null, true);
         return;
       }
