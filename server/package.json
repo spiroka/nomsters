@@ -1,0 +1,21 @@
+{
+  "name": "nomsters-api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clerk/fastify": "^1.0.45",
+    "@fastify/cors": "^8.5.0",
+    "@fastify/static": "^7.0.4",
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "fastify-sqlite": "^1.1.0"
+  }
+}
